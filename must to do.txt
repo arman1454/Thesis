@@ -1,0 +1,10 @@
+create a nodejs server and create an api endpoint for the functions to execute
+
+create a new github repo and push the code - amr github e push diss na... new akta khulbi
+
+must study solana and replicate the same thing seperately in solana just like I did it with ethereum
+
+explore geth
+
+
+
