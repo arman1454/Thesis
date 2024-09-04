@@ -2,7 +2,7 @@ const { ethers } = require('ethers');
 const contractAbi = require('./ABI.json');
 
 // Connect to the Sepolia network
-const provider = new ethers.providers.JsonRpcProvider('https://eth-sepolia.g.alchemy.com/v2/j8pR71uR77igUWtSTwIBPBe2WBaQRxuV');
+const provider = new ethers.providers.JsonRpcProvider('https://sepolia.infura.io/v3/b88ece4a38fe403d9f873ab378243eae');
 
 // Your wallet private key (Use a test account, never share private keys of real accounts)
 const privateKey = "0xf4491d77d82f082f6c0c2fb417ae315992c522f752f207fe427b0a7ce2aad932";
@@ -50,7 +50,7 @@ function measureLatency(totalLatency, numOfTransactions) {
 async function main() {
     const numberOfTransactions = 10;
     const interval = 60 * 1000 / numberOfTransactions;
-    let value = 23;
+    let value = 33;
     let totalLatency = 0;
     const latencies = [];
 
@@ -60,7 +60,7 @@ async function main() {
             latencies.push(latency);
             totalLatency += latency;
         }
-        await new Promise(resolve => setTimeout(resolve, interval));
+        await new Promise(resolve => setTimeout(resolve, 2));
         value++;
     }
 
